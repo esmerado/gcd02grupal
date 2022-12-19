@@ -1,0 +1,67 @@
+---
+title: "gcd02_grupal "
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+    theme: journal
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+```
+# Home
+
+## Column {data-width=650}
+-----------------------------------------------------------------------
+Calculamos la correlación de Pearson entre las variables temperatura y ozono.
+Generamos la visualización de ambas con una línea de regresión.
+
+Adicionalmente hemos calculado el test clásico de correlación entre las variables y hemos llegado a la conclusión de que
+el valor P obtenido es menor a 0.05 por lo que los resultado son estadísitcamente significativos de la hipótesis alternativa.
+
+
+### Linear Regresion
+
+```{r}
+ggplotly(linearRegresion)
+```
+
+### Conclusión
+
+Una vez efectuados todos los cálculos y graficado el factor de bayes, podemos concluir que existe correlación entre ambas variables de forma estadísitcamente significativa al comprobar que el BF es mayor que 10^2.
+
+Actividad realizada por: Carlos Daniel Saavedra Infante, Jaume Bolta Chumillas, Misael Sebastián Jiménez Magallanes, Saroi Pardavila Herrero y Javier Esmerado Vela
+
+## Column {data-width=350}
+-----------------------------------------------------------------------
+
+Mediante la función correlationBF calculamos la correlación entre ambos así cómo sus posteriores.
+
+Mostramos la gráfica de nuestros resultados, podemos ver que la media es ligeramente inferior al valor obtenido en la correlacionBF.
+
+### Rho
+
+```{r}
+plot(cbf)
+```
+
+## FB Result
+```{r}
+pizzabf
+```
+
+### FB display
+```{r}
+plot(pizzabf) + scale_fill_pizza()
+```
+
+# Raw Data
+
+## Column {data-width=1000}
+
+```{r}
+rawdata
+```
+
