@@ -24,3 +24,6 @@ linearRegresion <- ggplot(rawdata, aes(x=Temp, y=Ozone)) +
 
 ## Bayes Factor for the pizza plot.
 pizzabf <- bayesfactor(correlationBF(temp, ozone))
+
+## Memo
+memo <- "./memoria.Rmd"
